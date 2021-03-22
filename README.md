@@ -16,11 +16,21 @@ The applications of sentiment analysis are endless and can be applied to any ind
 * Definition of Scope
 * Data Collection 
 * Data Preparation 
-* Machine Learning/ Deep Learning 
+* Machine Learning
 * Data Visualization
 
 ### Definition of Scope
-The scope of the project would be focusing on the sentiments of the banks the Nigerian populace use. This would strictly focus on only banks and exclude the financial tech companies. 
+The scope of the project would be focusing on the sentiments of 5 banks the Nigerian populace use. We would be Analyzing 4 commercial banks and 1 Digital bank, with the advent of the digital banks I just want to take a peak and see how well these digital banks would do against the traditional commercial banks. This would strictly focus on only banks and exclude the financial tech companies. 
 
 ### Data Collection
-The data source is Twitter, a total of 1000 tweets contanting the keyword " bank_name" would be collected and cleaned in order to b
+The data source is Twitter, a total of 1500 tweets contanting the keyword " bank_name" would be collected through the Twitter API buy first creating a developer account. Next, the data is cleaned to remove "@" handles, emojis, url links etc. 
+
+### Data Preparation 
+The data is then vectorized (i.e put in a bag of words model) for visualization and to determine the sentiment of the tweets for the banks.
+
+### Machine Learning 
+We would utilize the "Textblob" library to determine the sentiment of the tweets that have been cleaned.
+
+### Data Visualization 
+
+
