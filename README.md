@@ -30,56 +30,24 @@ The data is then vectorized (i.e put in a bag of words model) to determine the s
 
 ### Machine Learning 
 We would utilize the "Textblob" library to determine the sentiment of the tweets that have been cleaned.
-```
-def percentage(part,whole):
- return 100 * float(part)/float(whole)
 
-def get_sentiment(corpus):
-    noOfTweet = 1
-    positive = 0
-    negative = 0
-    neutral = 0
-    polarity = 0
-    tweet_list = []
-    neutral_list = []
-    negative_list = []
-    positive_list = []
-    for tweet in corpus:
-        noOfTweet += 1
-        #print(tweet.text)
-        tweet_list.append(tweet)
-        analysis = TextBlob(tweet)
-        score = analyser().polarity_scores(tweet)
-        neg = score['neg']
-        neu = score["neu"]
-        pos = score["pos"]
-        comp = score['compound']
-        polarity += analysis.sentiment.polarity
-
-    if neg > pos:
-        negative_list.append(tweet)
-        negative += 1
-        
-    elif pos > neg:
-        positive_list.append(tweet)
-        positive += 1
-
-    elif pos == neg:
-        neutral_list.append(tweet)
-        neutral += 1
-    
-    positive = percentage(positive, noOfTweet)
-    negative = percentage(negative, noOfTweet)
-    neutral = percentage(neutral, noOfTweet)
-    polarity = percentage(polarity, noOfTweet)
-    positive = format(positive, '.1f')
-    negative = format(negative, '.1f')
-    neutral = format(neutral, '.1f')
-    return polarity, positive, negative, neutral
- 
-```
 ### Data Visualization 
 Comparism between the wordcloud of the various banks are in the folder img or in the notebook.
 Example of a Word Cloud is below:
 
-[Wordcloud of Guaranty Trust Bank]('https://github.com/toyinolape/Sentiment_analysis/img/review2')
+![Wordcloud of Guaranty Trust Bank]('https://github.com/toyinolape/Sentiment_analysis/img/review2.png')
+
+## Web App
+We would be making a web app using the python library "Flask" which is a Python web framework built with a small core and easy-to-extend philosophy. The textblob module would then be used to predict the polarity of a text or sentence entered into the web app. 
+Polarity above 0.7 would be considered postive, polarity between the range 0.7 - 0.4 are neutral and all below 0.4 would be negative.
+
+Hosting on Local device: http://127.0.0.1:5000/sentiments , http://127.0.0.1:5000/sentiments
+
+![Web App]('https://github.com/toyinolape/Sentiment_analysis/img/senti1.PNG')
+
+The result of the sentence that was keyed into the web app above is as follows;
+![Result]('https://github.com/toyinolape/Sentiment_analysis/img/senti2.PNG')
+
+## Deploy Web App to Docker
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sentimental Analysis</title>
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="../static/style.css">
+	  
+	  </head>
+<body>
+	<div class = "login">
+		<h2>Fill in your text or sentence to get the Polarity from 0.0 - 1.0</h2>
+
+		<form action ="/sentiments" method ="POST">
+			<input type="text" name="Text" placeholder="Input Text">
+	
+	
+			<input type="submit" value="sentiment" class="btn">
+	
+		</form>
+
+	</div>
+   
+</body>
+</html>
