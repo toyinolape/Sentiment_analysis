@@ -35,7 +35,7 @@ We would utilize the "Textblob" library to determine the sentiment of the tweets
 Comparism between the wordcloud of the various banks are in the folder img or in the notebook.
 Example of a Word Cloud is below:
 
-![Wordcloud of Guaranty Trust Bank]('https://github.com/toyinolape/Sentiment_analysis/img/review2.png')
+![Wordcloud of Guaranty Trust Bank]('https://github.com/toyinolape/Sentiment_analysis/blob/master/img/review2.png')
 
 ## Web App
 We would be making a web app using the python library "Flask" which is a Python web framework built with a small core and easy-to-extend philosophy. The textblob module would then be used to predict the polarity of a text or sentence entered into the web app. 
@@ -43,10 +43,10 @@ Polarity above 0.7 would be considered postive, polarity between the range 0.7 -
 
 Hosting on Local device: http://127.0.0.1:5000/sentiments , http://127.0.0.1:5000/sentiments
 
-![Web App]('https://github.com/toyinolape/Sentiment_analysis/img/senti1.PNG')
+![Web App](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti1.PNG)
 
 The result of the sentence that was keyed into the web app above is as follows;
-![Result]('https://github.com/toyinolape/Sentiment_analysis/img/senti2.PNG')
+![Result](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti2.PNG)
 
 ## Deploy Web App to Docker
 
