@@ -49,7 +49,7 @@ body {
 input {
 	width: 100%;
 	margin-bottom: 10px;
-	background: rgba(255,0,0,0.3);
+	background: rgb(214, 173, 248);
 	border: none;
 	outline: none;
 	padding: 10px;

@@ -41,7 +41,44 @@ Example of a Word Cloud is below:
 We would be making a web app using the python library "Flask" which is a Python web framework built with a small core and easy-to-extend philosophy. The textblob module would then be used to predict the polarity of a text or sentence entered into the web app. 
 Polarity above 0.7 would be considered postive, polarity between the range 0.7 - 0.4 are neutral and all below 0.4 would be negative.
 
-Hosting on Local device: http://127.0.0.1:5000/sentiments , http://127.0.0.1:5000/sentiments
+To run the web app, you can follow the steps below 
+
+The command is used to install the virtual environment
+```
+python3 -m pip install --user virtualenv
+
+```
+Use the next command to first create your virtual environment where “stu_env” is the name of my virtual environment:
+```
+python3 -m venv Stuternenv
+```
+
+Then activate the virtual environment that was just created.
+```
+source stu_env/bin/activate
+```
+Then the code block below installs the required modules/libraries the web app depends on.
+
+```
+pip3 install -r requirements.txt
+```
+
+Run the web app on your local device by executing the script on python3 then copy the http link for a demo on your web browser.
+
+```
+(stu_env)../Sentiment_analysis$ python3 app.py
+
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:7000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 869-664-515
+
+```
 
 ![Web App](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti1.PNG)
 
@@ -49,5 +86,4 @@ The result of the sentence that was keyed into the web app above is as follows;
 ![Result](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti2.PNG)
 
 ## Deploy Web App to Docker
-
-
+To Deploy on Docker, our web image would be built on a base image as shown in the dockerfile and then the image would be run in a docker container 
