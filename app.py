@@ -1,26 +1,22 @@
 #!/usr/bin/env python3
-
-import pandas as pd
-import numpy as np
-from textblob import TextBlob 
-import pickle
-from flask import Flask, jsonify, request, render_template, url_for
-import json
-from joblib import dump, load
+"""
+Web App on Sentimental Analysis
+"""
+from textblob import TextBlob
+from flask import Flask, request, render_template
 
 app=Flask(__name__)
 
 
 @app.route('/')
 def welcome():
+    """Welcome page"""
     return render_template("./index.html")
-    
 
 @app.route('/sentiments', methods = ["POST","GET"])
 def sentiments():
-    # execute when sentiments is clicked
-    if request.method == "POST":
-        
+    """Execute code block to get Sentiment polarity"""
+    if request.method == "POST": 
         try:
             text = request.form.get("Text")
             polarity1 = TextBlob(text).sentiment.polarity
@@ -31,7 +27,7 @@ def sentiments():
             else:
                 polarity1 = "Negative"
             return render_template("result.html", polarity = polarity1)
-        except:
+        except(TypeError):
             return"<h2> Recheck your code block </h2>"
     else:
         return"<h2>Also recheck</h2>"
