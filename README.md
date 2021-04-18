@@ -33,7 +33,7 @@ The data source is Twitter, a total of 1500 tweets contanting the keyword " bank
 ### Data Preparation 
 Next, the data is cleaned to remove "@" handles, emojis, url links etc. The data is then vectorized (i.e put in a bag of words model) to determine the sentiment of the tweets for the banks. The dataset is also tranformed to enable wordcloud visualization using wordcloud module.
 
-![Wordcloud of Guaranty Trust Bank]('https://github.com/toyinolape/Sentiment_analysis/blob/master/img/review2.png')
+![Wordcloud of Guaranty Trust Bank](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/review2.png)
 
 ### Machine Learning 
 We would utilize the "Textblob" library to determine the sentiment of the tweets that have been cleaned. Polarity above 0.7 would be considered postive, polarity between the range 0.7 - 0.4 are neutral and all below 0.4 would be negative.
@@ -72,14 +72,14 @@ Run the web app on your local device by executing the script on python3 then cop
 
 ```
 
-![Web App](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti1.PNG)
+![Web App](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti2.PNG)
 
 The result of the sentence that was keyed into the web app above is as follows;
-![Result](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti2.PNG)
+![Result](https://github.com/toyinolape/Sentiment_analysis/blob/master/img/senti1.PNG)
 
 
 #### Hosting on Azure Web App Service
 
 This web app would be hosted on Azure web app service. First an Azure subscription is created and an Azure Web App Service Rsource was used to host the website. 
 
-![Bank Sentiment Web App](https://sentimentanalysis1.azurewebsites.net/)
+[Bank Sentiment Web App](https://sentimentanalysis1.azurewebsites.net/)
