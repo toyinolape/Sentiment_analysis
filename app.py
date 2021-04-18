@@ -22,11 +22,11 @@ def sentiments():
             polarity1 = TextBlob(text).sentiment.polarity
             if polarity1 >= 0.7:
                 polarity1 = "Positive"
-            elif polarity1 >= 0.4:
+            elif polarity1 >= 0.3:
                 polarity1 = "Neutral"
             else:
                 polarity1 = "Negative"
-            return render_template("result.html", polarity = polarity1)
+            return render_template("./result.html", polarity = polarity1)
         except(TypeError):
             return"<h2> Recheck your code block </h2>"
     else:

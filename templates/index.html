@@ -7,22 +7,135 @@
 	  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 	  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 	  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	  <link rel="stylesheet" href="../static/style.css">
-	  
+	  <style>
+		body{
+			background-color: #2c7896;
+			font-family: Arial, Helvetica, sans-serif;
+			color: #fff;
+			font-size: 18px;
+			text-align:center;
+		}
+		.btn{
+			height: 40px;
+			background-color: #5a75c0;
+			border: none;
+			text-align: center;
+			border-radius: 8px;
+			padding: 2px 2px;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: auto;
+			cursor: pointer;
+			color: white;
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.text{
+			height: 35px;
+			border: none;
+			text-align: center;
+			border-radius: 8px;
+			padding: 2px 2px;
+			text-decoration: none;
+			background-color: white;
+			display: inline-block;
+			font-size: 16px;
+			margin: auto;
+			color: black;
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.btn:hover {
+			background-color: rgb(2, 19, 92);
+			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+		.container{
+			margin:auto;
+			margin-top: 100px;
+			border: 3px solid red;
+
+		}
+
+		.container h1{
+			text-shadow: 0 0 10px rgba(0,0,0,0.3);
+			letter-spacing:1px;
+		}
+
+		.login {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		margin: -150px 0 0 -150px;
+		width:400px;
+		height:400px;
+		}
+
+		.login h2 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+		input {
+		width: 100%;
+		padding: 7px;
+		border: none;
+		outline: none;
+		font-size: 13px;
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		border: 1px solid rgba(0,0,0,0.3);
+		border-radius: 4px;
+		box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+
+		}
+		input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+		}
+		footer{
+			width: 100%;
+			height: 60%;
+			position: relative;
+			top: 395px;
+			border: 3px solid red;
+			margin: none;
+
+		}
+		footer a{
+			color: white;
+			text-decoration: none;
+			padding: 10px 20px;
+
+		}
+		footer a:hover{
+			color: darkblue;
+
+		}
+		.end{
+			margin-top: 715px
+		}
+
+	  </style>
+
 	  </head>
 <body>
-	<div class = "login">
-		<h2>Fill in your text or sentence to get the Polarity from 0.0 - 1.0</h2>
+	<div class="login">
+			<h1> Bank Tweet Analysis</h1>
+				<form action ="/sentiments" method ="POST" >
+						<input type="text" name="Text" placeholder="Insert Bank tweet" class="text">
+						<input type="submit" value="Sentiment" class="btn">
+ </div>
 
-		<form action ="/sentiments" method ="POST">
-			<input type="text" name="Text" placeholder="Input Text">
-	
-	
-			<input type="submit" value="sentiment" class="btn">
-	
-		</form>
+				</form>
+			</div>
 
 	</div>
-   
+	<div class="end">
+		<footer>
+			<ul>
+				<a href="https://github.com/toyinolape">GITHUB </a>
+				<a href="mailto:stellaolape@gmail.com">EMAIL</a>
+			</ul>
+
+		</footer>
+	</div>
+
+
 </body>
 </html>

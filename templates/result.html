@@ -4,33 +4,97 @@
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <style>
-        body {
-                width: 100%;
-                height:100%;
-                font-family: 'Open Sans', sans-serif;
-                background: #486edada;
-                color: #fff;
-                font-size: 18px;
-                text-align:center;
-                letter-spacing:1.2px;
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+				body{
+					background-color: #2c7896;
+					font-family: Arial, Helvetica, sans-serif;
+					color: #fff;
+					font-size: 18px;
+					text-align:center;
+				}
+				.btn{
+					height: 40px;
+					width:20%;
+					background-color: #5a75c0;
+					border: none;
+					text-align: center;
+					border-radius: 8px;
+					padding: 2px 2px;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin: auto;
+					cursor: pointer;
+					color: white;
+					margin-top: 10px;
+					margin-bottom: 0;
+				}
+				.btn:hover {
+					background-color: rgb(2, 19, 92);
+					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+				}
+				.container{
+					margin:auto;
+					margin-top: 185px;
 
-            }
+				}
+				.container h3{
+					text-shadow: 0 0 10px rgba(0,0,0,0.3);
+					letter-spacing:1px;
+					font-size: 24px;
 
-        .h2 {
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                margin: -150px 0 0 -150px;
-                width:400px;
-                height:400px;
-        }
 
+				}
+				form{
+
+					margin: auto;
+					text-align: center;
+					font-size: 18px;
+					height: 40%;
+					font-size: 14px;
+					border-radius: 6px;
+					padding: 10px 50px;
+				}
+				form input{
+
+						margin: auto;
+						width: 40% ;
+						text-align: center;
+						font-size: 16px;
+						height: 33px;
+						border-radius: 6px;
+			}
+			footer{
+				width: 100%;
+				height: 60%;
+				position: relative;
+				top: 410px;
+
+			}
+			footer a{
+				color: white;
+				text-decoration: none;
+				padding: 10px 20px;
+				bottom: 20px;
+
+			}
+			footer a:hover{
+				color: darkblue;
+			}
     </style>
-
 </head>
-<div class="h2">
-    <h2> The Text Sentiment is : {{polarity}}</h2>
-</div>
+<body>
+    <div class="container">
+        <h3> The Text Sentiment is : {{polarity}}</h3>
+        <input type="button" value="Try Again" onclick="history.back(-1)" class="btn">
+    </div>
+
+    <footer>
+        <ul>
+            <a href="https://github.com/toyinolape">GITHUB</a>
+            <a href="mailto:stellaolape@gmail.com">EMAIL</a>
+        </ul>
+
+    </footer>
+</body>
